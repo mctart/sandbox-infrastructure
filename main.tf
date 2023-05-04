@@ -1,3 +1,15 @@
+# Configure the AWS Provider
+provider "aws" {
+  region = var.aws_region
+  default_tags {
+    tags = {
+      Environment = terraform.workspace
+      Owner       = "Acme"
+      Provisioned = "Terraform"
+    }
+  }
+}
+
 module "vpc" {
   source             = "terraform-aws-modules/vpc/aws"
   version            = "4.0.1"
