@@ -8,6 +8,11 @@ variable "production_vpc_cidr" {
   default = "10.0.0.0/16"
 }
 
+variable "production_vpc_name" {
+  type    = string
+  default = "demo_vpc"
+}
+
 variable "development_aws_region" {
   type    = string
   default = "eu-central-1"

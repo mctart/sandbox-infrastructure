@@ -11,7 +11,7 @@ provider "aws" {
 resource "aws_vpc" "vpc" {
   cidr_block = var.production_aws_region
   tags = {
-    Name        = var.vpc_name
+    Name        = var.production_vpc_name
     Environment = "demo_environment"
     Terraform   = "true"
   }
