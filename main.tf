@@ -4,7 +4,7 @@ data "aws_region" "current" {}
 
 # Configure the AWS Provider
 provider "aws" {
-  region = var.aws_region
+  region = var.production_aws_region
 }
 
 #Define the Production VPC
